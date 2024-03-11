@@ -1,6 +1,6 @@
 package ArrayList;
 
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     /**
@@ -30,6 +30,30 @@ public class Main {
         // on.nextLine();
         thing = new Thing(id, name, venue, year, month, day);
         System.out.println(thing.toString() + thing.getName());
+        // on.close();
+
+        Thing thing_1 = new Thing();
+        // Scanner in = new Scanner(System.in);
+        int history = 0;
+        do {
+
+            System.out.println("Here are the choices you can choose in the program");
+            System.out.println("Type 1 to enter the event details ");
+            System.out.println("Type 2 to enter a attendee's name that are coming to the event ");
+            System.out.println("Type 3  to remove a attendee of the list");
+            System.out.println("Type 4 to update a attendee from the lis t");
+            System.out.println("Type 5 to search a attendee from the list ");
+
+            System.out.println("Type 6 to display a attendee from the list ");
+            // System.out.println("");
+            // on.next();
+            history = on.nextInt();
+            thing.organevent(history);
+            // System.out.println("/////");
+
+            System.out.println("Please enter the ");
+
+        } while (history != 7);
         on.close();
     }
 
